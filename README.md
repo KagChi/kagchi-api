@@ -10,7 +10,7 @@ npm install @kagchi/kag-api
 <br>
   Changelog V1.5.5
   <ul>
-  <li>Fixed Brainkly Search</li></ul>
+  <li>Fixed Brainly Search</li></ul>
 </details>
 
 ## Usage
