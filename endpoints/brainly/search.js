@@ -2,25 +2,25 @@ const axios = require("axios");
 
 async function id(query) {
     if (!query) throw Error('Please enter question!');
-   const data = await axios.get('https://kagchi-api.glitch.me/brainly/id?q=' + query)
+   const data = await axios.get('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/id/' + query)
   return data;
 }
 
 async function pl(query) {
   if (!query) throw Error('Please enter question!');
-   const data = await axios.get('https://kagchi-api.glitch.me/brainly/pl?q=' + query)
+   const data = await axios.get('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/pl/' + query)
   return data;
 }
 
 async function pt(query) {
   if (!query) throw Error('Please enter question!');
-   const data = await axios.get('https://kagchi-api.glitch.me/brainly/pt?q=' + query)
+   const data = await axios.get('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/pt/' + query)
   return data;
 }
 
 async function us(query) {
   if (!query) throw Error('Please enter question!');
-   const data = await axios.get('https://kagchi-api.glitch.me/brainly/us?q=' + query)
+   const data = await axios.get('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/us/' + query)
   return data;
 }
 
