@@ -73,7 +73,7 @@ msg.channel.send(`${users.name}`)
 ```js
 const KagApi = require("@kagchi/kag-api")
 const meme = await kagApi.memes()
-msg.channel.send(`http://imgur.com/${meme.hash}.jpg`)
+msg.channel.send(`http://imgur.com/${meme.hash}.jpg`) //send imgur image
 //api.dankmemes()
 //api.indonesia()
 //api.coronamemes()
