@@ -8,9 +8,9 @@ npm install @kagchi/kag-api
 <details>
 <summary>Changelog</summary>
 <br>
-  Changelog V1.1.6-dev
+  Changelog V1.5.5
   <ul>
-  <li>No More Constructor!</li></ul>
+  <li>Fixed Brainkly Search</li></ul>
 </details>
 
 ## Usage
