@@ -78,9 +78,4 @@ msg.channel.send(`http://imgur.com/${meme.hash}.jpg`)
 //api.indonesia()
 //api.coronamemes()
 ```
-### List Api:
-1. random wikihow
-2. coinflip
-3. Random Users
-4. Random Memes
-5. Subreddit
+
