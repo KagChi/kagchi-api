@@ -35,4 +35,4 @@ const axios = require("axios")
    const data = await axios.get("https://nezumiyuiz.glitch.me/api/chika").then(res => res.data.url)
   return data;
 }
-module.exports = { nezuko, random, bunnygirl, megumin, zerotwo, hayasaka, chika, rem }
+module.exports = { nezuko, random, bunnygirl, megumin, zerotwo, hayasaka, chika, rem };
