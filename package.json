@@ -1,6 +1,6 @@
 {
   "name": "@kagchi/kag-api",
-  "version": "1.5.2",
+  "version": "1.5.5",
   "description": "a simple api wrapper",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,6 @@
   "author": "KagChi#2628",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "0.20.0"
   }
 }
