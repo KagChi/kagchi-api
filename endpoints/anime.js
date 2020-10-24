@@ -50,4 +50,9 @@ async function slap() {
     return data;
 }
 
-module.exports = { baka, pat, feed, trap, poke, kiss, cuddle, search, hug, slap }
+async function smug() {
+    const data = await axios.get("https://nekos.life/api/v2/img/slap").then(res => res.url)
+    return data;
+}
+
+module.exports = { baka, pat, feed, trap, poke, kiss, cuddle, search, hug, slap, smug }
