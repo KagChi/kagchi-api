@@ -24,7 +24,7 @@ async function us(query) {
   return data;
 }
 
-async function info() {
+const info {
     const data = {
      id: "indonesia",
      pt: "portuguese",
@@ -34,4 +34,4 @@ async function info() {
     return data;
 }
 
-module.exports = { id, pl, pt ,us, info}
+module.exports = { id, pl, pt ,us, info }
