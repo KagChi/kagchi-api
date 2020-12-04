@@ -24,14 +24,11 @@ async function us(query) {
   return data;
 }
 
-const info {
-    const data = {
-     id: "indonesia",
-     pt: "portuguese",
-     pl: "poland",
-     us: "united states",
-    }
-    return data;
+const info = {
+    id: "indonesia",
+    pt: "portuguese",
+    pl: "poland",
+    us: "united states",
 }
 
 module.exports = { id, pl, pt ,us, info }
