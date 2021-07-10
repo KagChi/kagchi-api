@@ -9,19 +9,17 @@ Collection of useful api for discord bot's
   - Image response completely changed
      ```diff
      const kagApi = require("@kagchi/kag-api")
-
      - msg.channel.send(await kagApi.waifu.nezuko());
      + msg.channel.send((await kagApi.waifu.nezuko()).url);
      ```
      
   - Random users response completely changed
     ```diff
-     const KagApi = require("@kagchi/kag-api");
-     const users = await kagApi.user();
-
-     - message.channel.send(`${users.name}`)
-     + message.channel.send(`${users[0].name}`)
-     ```
+    const KagApi = require("@kagchi/kag-api");
+    const users = await kagApi.user();
+    - message.channel.send(`${users.name}`)
+    + message.channel.send(`${users[0].name}`)
+    ```
      
   - Changes
     - removed inactive api endpoints
