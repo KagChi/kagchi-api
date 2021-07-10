@@ -1,18 +1,9 @@
-export * from './endpoints/anime';
-export * from './endpoints/waifu';
-import { us, pl, pt, id } from './endpoints/brainly/search';
-export declare const brainly: {
-    us: typeof us;
-    pl: typeof pl;
-    pt: typeof pt;
-    id: typeof id;
-    info: {
-        id: string;
-        pt: string;
-        pl: string;
-        us: string;
-    };
-};
+import * as animeEndpoints from './endpoints/anime';
+import * as waifuEndpoints from './endpoints/waifu';
+import * as brainlyEndpoints from './endpoints/brainly/search';
+export declare const anime: typeof animeEndpoints;
+export declare const brainly: typeof brainlyEndpoints;
+export declare const waifu: typeof waifuEndpoints;
 export declare function coin(): Promise<cointResult>;
 export declare function user(): Promise<user>;
 export declare function memeindo(): Promise<subredditResult>;
@@ -79,3 +70,4 @@ interface cointResult {
     coin_image: string;
     coin: string;
 }
+export {};
