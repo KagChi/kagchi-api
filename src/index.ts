@@ -1,6 +1,5 @@
 import apiError from './baseError';
-import petitio from 'petitio';
-
+import axios from 'axios';
 import * as animeEndpoints from './endpoints/anime';
 import * as waifuEndpoints from './endpoints/waifu';
 import * as brainlyEndpoints from './endpoints/brainly/search';
@@ -10,21 +9,21 @@ export const brainly = brainlyEndpoints;
 export const waifu = waifuEndpoints; 
 export async function coin(): Promise<cointResult> {
     try {
-        return await petitio('https://kagchi-api.glitch.me/coin').json()
+        return await axios.get('https://kagchi-api.glitch.me/coin').then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }
 }
 export async function user(): Promise<user> {
     try {
-        return await petitio('https://kagchi-api.glitch.me/users').json()
+        return await axios.get('https://kagchi-api.glitch.me/users').then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }
 }
 export async function memeindo(): Promise<subredditResult> {
     try {
-        return await petitio('https://kagchi-api.glitch.me/meme/indonesia').json()
+        return await axios.get('https://kagchi-api.glitch.me/meme/indonesia').then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }
@@ -32,7 +31,7 @@ export async function memeindo(): Promise<subredditResult> {
 
 export async function memes(): Promise<subredditResult> {
     try {
-        return await petitio('https://kagchi-api.glitch.me/meme/memes').json()
+        return await axios.get('https://kagchi-api.glitch.me/meme/memes').then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }
@@ -40,7 +39,7 @@ export async function memes(): Promise<subredditResult> {
 
 export async function dankmemes(): Promise<subredditResult> {
     try {
-        return await petitio('https://kagchi-api.glitch.me/meme/dankmemes').json()
+        return await axios.get('https://kagchi-api.glitch.me/meme/dankmemes').then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }
@@ -48,7 +47,7 @@ export async function dankmemes(): Promise<subredditResult> {
 
 export async function coronamemes(): Promise<subredditResult> {
     try {
-        return await petitio('https://kagchi-api.glitch.me/meme/coronamemes').json()
+        return await axios.get('https://kagchi-api.glitch.me/meme/coronamemes').then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }
@@ -57,7 +56,7 @@ export async function coronamemes(): Promise<subredditResult> {
 export async function subreddit(query: string): Promise<subredditResult> {
     if(!query) throw new apiError('Input query to search.');
     try {
-        return await petitio('https://kagchi-api.glitch.me/subreddit/' + query).json()
+        return await axios.get('https://kagchi-api.glitch.me/subreddit/' + query).then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }

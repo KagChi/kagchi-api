@@ -1,10 +1,10 @@
 import apiError from "../../baseError";
-import petitio from 'petitio';
+import axios from 'axios';
 
 export async function id(query: string): Promise<brainlyResult[]> {
     if(!query) throw new apiError('Input query to search.')
     try {
-        return await petitio('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/id/' + query).json()
+        return await axios.get('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/id/' + query).then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }
@@ -13,7 +13,7 @@ export async function id(query: string): Promise<brainlyResult[]> {
 export async function pl(query: string): Promise<brainlyResult[]> {
     if(!query) throw new apiError('Input query to search.')
     try {
-        return await petitio('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/pl/' + query).json()
+        return await axios.get('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/pl/' + query).then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }
@@ -22,7 +22,7 @@ export async function pl(query: string): Promise<brainlyResult[]> {
 export async function pt(query: string): Promise<brainlyResult[]> {
     if(!query) throw new apiError('Input query to search.')
     try {
-        return await petitio('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/pt/' + query).json()
+        return await axios.get('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/pt/' + query).then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }
@@ -31,7 +31,7 @@ export async function pt(query: string): Promise<brainlyResult[]> {
 export async function us(query: string): Promise<brainlyResult[]> {
     if(!query) throw new apiError('Input query to search.')
     try {
-        return await petitio('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/us/' + query).json()
+        return await axios.get('https://famouscomplicatedoutsourcing.darkforestbeep.repl.co/us/' + query).then(x => x.data)
     } catch(e) {
         throw new apiError(`An error occured when fetching: ` + e)
     }
