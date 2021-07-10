@@ -8,7 +8,7 @@ export async function nezuko(): Promise<Result> {
     }
 }
 
-export async function mai() {
+export async function mai(): Promise<Result> {
     try {
         return await axios.get('https://kagchi.my.id/api/mai').then(x => x.data)
     } catch(e) {
@@ -16,7 +16,7 @@ export async function mai() {
     }
 }
 
-export async function takagi() {
+export async function takagi(): Promise<Result> {
     try {
         return await axios.get('https://kagchi.my.id/api/takagi').then(x => x.data)
     } catch(e) {
