@@ -1,11 +1,13 @@
 import apiError from './baseError';
 import petitio from 'petitio';
 
-export * from './endpoints/anime';
-export * from './endpoints/waifu';
-import { us, pl, pt, id, info } from './endpoints/brainly/search';
-export const brainly = { us, pl, pt, id, info }
+import * as animeEndpoints from './endpoints/anime';
+import * as waifuEndpoints from './endpoints/waifu';
+import * as brainlyEndpoints from './endpoints/brainly/search';
 
+export const anime = animeEndpoints;
+export const brainly = brainlyEndpoints;
+export const waifu = waifuEndpoints; 
 export async function coin(): Promise<cointResult> {
     try {
         return await petitio('https://kagchi-api.glitch.me/coin').json()
