@@ -2,8 +2,11 @@
 Collection of useful api for discord bot's
 
 
-## Installation
+# Installation
+ ### Stable version
  - npm install @kagchi/kag-api
+ ### Dev version
+ - npm install KagChi/kagchi-api
 
 ## Upgrading from 1.5.5 to 2.0.0
   - Image response completely changed
